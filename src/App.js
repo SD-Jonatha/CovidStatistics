@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          New Covid
+          STATISTIC  COVID
         </a>
       </header>
     </div>
