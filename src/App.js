@@ -10,16 +10,14 @@ function App() {
   const [card, setCard] = useState([]);
   // const [flag, setFlag] = useState('');
   // const [selectFlag, setSelectFlag] = useState('');
-  const [ setFinishedTimeout] = useState(false);
+
   useEffect(() => {
     
     country();
-    flagss();
-    const id = setTimeout(()=> {
-      setFinishedTimeout(true);
-    }, 2000);
 
-    return ()=> clearTimeout(id);
+   
+
+   
    
   
   }, []);
@@ -55,11 +53,11 @@ function App() {
           
 
         for(let i = 0; i < response.data.length; i++){
-          const oi = setFlags.filter((item)=> response.data[i].country == 
+          const oi = setFlags.filter((item)=> response.data[i].country ===
           item.name)
           //  console.log( 'find' , oi[0]?.flagban)
           if(oi[0]?.flagban === undefined){
-            const oi = setFlags.filter((item)=> response.data[i].country == 
+            const oi = setFlags.filter((item)=> response.data[i].country ===
             item.cca3)
             
             all.push( {
@@ -138,7 +136,7 @@ function App() {
          
           card.map((item, i) => {
             
-           if(item.bandeira != undefined){
+           if(item.bandeira !== undefined){
             return(
               
 
