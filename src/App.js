@@ -14,9 +14,6 @@ function App() {
   useEffect(() => {
     
     country();
-
-   
-
    
    
   
@@ -108,13 +105,7 @@ function App() {
       
     }
 
-    function flagss(){
-      
-     
-        
-      
-    }
-
+    
     
   return (
 
