@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-import {api, flags, selectFlag} from './service/api'
+import {api, flags} from './service/api'
 //import flags from './service/flags'
 import './App.css';
 
