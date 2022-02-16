@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
 
 import React, { useEffect, useState } from 'react';
 
@@ -185,7 +187,6 @@ function App() {
   <div class="card-body">
     <h5 class="card-title">LOADING</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
           }
