@@ -8,9 +8,9 @@ import './App.css';
 
 function App() {
   const [card, setCard] = useState([]);
-  const [flag, setFlag] = useState('');
-  const [selectFlag, setSelectFlag] = useState('');
-  const [finishedTimeout, setFinishedTimeout] = useState(false);
+  // const [flag, setFlag] = useState('');
+  // const [selectFlag, setSelectFlag] = useState('');
+  const [ setFinishedTimeout] = useState(false);
   useEffect(() => {
     
     country();
@@ -28,12 +28,12 @@ function App() {
   let all = []
   let setFlags = []
 
-    function country() {
-      api.get("/countries").then(response => {
+  async  function country() {
+    await  api.get("/countries").then(response => {
         //  console.log('Bora codar', response.data)
         // setCard(response.data)
 
-        flags.get("all").then(atual =>{
+      flags.get("all").then(atual =>{
            console.log(atual.data, "flags")
   
            setFlags = atual.data.map((item)=> {
@@ -50,7 +50,6 @@ function App() {
           })
           // console.log('loucura', setFlags)
   
-          setFlag(setFlags)
 
           
           
@@ -124,24 +123,28 @@ function App() {
    <>
     
       <div className='container-fluid'>
+        
       
       <div className="row">
-      
           {
-      console.log(card)
-
-
+            console.log(card.length, card)
           }
+      
+         
           {
-          
+         
                card.length > 1 ? 
              
          
           card.map((item, i) => {
-
+            
            if(item.bandeira != undefined){
             return(
-            <div key = {i} className="col-6 col-md-3" style= {{background: "#ccc"}} >
+              
+
+
+            <div key = {i} className="col-12 col-md-3" style= {{background: "#ccc"}} >
+            
               <div className='card' style= {{margin: "5px 5px", background: "#ccc"}}>
              
               <div className="img" style= {{display: "flex", justifyContent: "space-between"}}>
@@ -199,21 +202,7 @@ function App() {
           }
           </div>
        
-      {/* { 
-      
-      card.map((item => {
-        for(let i = 0; i < 5; i++){
-      return(
-        
-        <div className="App-filho">
-          
-          <h1> {item[i].country}</h1>
-          
-       </div>
-        
-        )}
-       
-     }))} */}
+   
  </div>
 </>
      
